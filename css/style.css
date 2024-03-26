@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+//SP版のスタイルを記述
+.wrap {max-width: 600px;}
+.header {width: 100%; text-align: left; height: 54px; padding: 10px; position: fixed; 0top: 0; z-index: 100; background-color: #fff; box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);}
+.header .logo {width: 100px;}
+.header .logo img {width: 100%;}
+
+.main-visual {width: 100%; position: relative; top: -54px;}
+.main-visual .img-mv {width: 100%;}
+
+/*==================================================
+　ナビボタン 3本線が回転して×に
+===================================*/
+
+/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+.openbtn6{
+    position: absolute;
+    right: 10px;
+    top:5px;
+    cursor: pointer;
+      width: 60px;
+      height:34px;
+}
+  
+  /*ボタン内側*/
+  .openbtn6 span{
+      display: inline-block;
+      transition: all .4s;/*アニメーションの設定*/
+      position: absolute;
+      right: 14px;
+      height: 2px;
+      border-radius: 2px;
+    background: #000;
+    }
+  
+  
+  .openbtn6 span:nth-of-type(1) {
+    top:15px; 
+      width: 20%;
+  }
+  
+  .openbtn6 span:nth-of-type(2) {
+    top:23px;
+      width: 40%;
+  }
+  
+  .openbtn6 span:nth-of-type(3) {
+    top:31px;
+      width: 60%;
+  }
+  
+  /*activeクラスが付与されると線が回転して×になる*/
+  
+  .openbtn6.active span:nth-of-type(1) {
+      top: 18px;
+      left: 18px;
+      transform: translateY(6px) rotate(-135deg);
+      width: 30%;
+  }
+  
+  .openbtn6.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+  
+  .openbtn6.active span:nth-of-type(3){
+      top: 30px;
+      left: 18px;
+      transform: translateY(-6px) rotate(135deg);
+      width: 30%;
+  }
+
+
+
+
+/*media Queries 600px以上 タブレット用
+----------------------------------------------------*/
+@media screen and (min-width: 600px) {
+//タブレット版のスタイルを記述
+
+}
+
+*media Queries 1025px以上
+----------------------------------------------------*/
+@media screen and (min-width: 1025px) {
+//PC版のスタイルを記述
+
+}
