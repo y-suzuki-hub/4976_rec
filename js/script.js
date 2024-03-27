@@ -82,15 +82,23 @@ $('.title').on('click', function() {//タイトル要素をクリックしたら
   });
 
 //目次を閉じるをクリックした時の動作
-$('.4976__index--close').on('click', function() {
+/*
+$('.theory__index--close').on('click', function() {
     $('.box').slideToggle();//アコーディオンの上下動作
-
-    if($(this).hasClass('close')){//タイトル要素にクラス名closeがあれば
-      $(this).removeClass('close');//クラス名を除去し
-    }else{//それ以外は
-      $(this).addClass('close');//クラス名closeを付与
-    }
+    $('.title').addClass('close');//クラス名closeを付与
   });
+  */
+
+  $('.theory__index--close').on('click', function() {
+    var $title = $('.box').prev('.title'); // .boxの直前の.title要素を選択
+    $('.box').slideToggle(); // アコーディオンの上下動作
+
+    if($title.hasClass('close')){//タイトル要素にクラス名closeがあれば
+        $title.removeClass('close');//クラス名を除去し
+      }else{//それ以外は
+        $title.addClass('close');// .boxの直前の.titleにcloseクラスを付与
+      }
+});
   
   //ページが読み込まれた際にopenクラスをつけ、openがついていたら開く動作※不必要なら下記全て削除
   $(window).on('load', function(){
@@ -102,5 +110,21 @@ $('.4976__index--close').on('click', function() {
       $(Box).slideDown(500);          //アコーディオンを開く
     });
   });
+
+
+  // #で始まるアンカーをクリックした場合に処理
+  $('a[href^=#]').click(function() {
+    // スクロールの速度
+    var speed = 400; // ミリ秒
+    // アンカーの値取得
+    var href= $(this).attr("href");
+    // 移動先を取得
+    var target = $(href == "#" || href == "" ? 'html' : href);
+    // 移動先を数値で取得
+    var position = target.offset().top;
+    // スムーススクロール
+    $('body,html').animate({scrollTop:position}, speed, 'swing');
+    return false;
+ });
 
 

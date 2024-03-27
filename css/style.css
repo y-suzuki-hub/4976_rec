@@ -149,9 +149,18 @@
 .message__img--name {padding-top: 20px;}
 
 .want { width: 100%; }
-.want__wrap {width: 100%; text-align: center; padding: 40px 15px;}
+.want__wrap {width: 100%; text-align: center; padding: 40px 15px; width: 100%; }
 .want__text {line-height: 1.5em; font-size:18px; font-weight: 700; color: #333;}
 
+.theory { width: 100%; position: relative; font-size:15px; }
+.theory__wrap {width: 100%;  padding: 40px 15px; background: #fcf7f2 url(../images/bg_4976-top.jpg) no-repeat top / 100%; }
+.theory__indextitle { background: url(../images/dotline.png) no-repeat left / 30px; font-size: 15px; padding-left: 36px; position: relative; left: -16px; }
+.theory__contents { color: #666; }
+.theory__index--head { padding-left: 24px; }
+.theory__menu { padding: 20px 0; }
+.theory__index--body { padding: 15px 0 20px 25px;}
+.theory__index--body p { padding: 0 0 15px 15px; background: url(../images/arrow_right.png) no-repeat left / 8px; background-position-y: 3px; }
+.theory__index--close { width: 100%; text-align: right; padding-top: 20px; }
 
 /*アコーディオン全体*/
 .accordion-area{
@@ -173,36 +182,23 @@
     transition: all .5s ease;
 }
 
-/*アイコンの＋と×*/
-.title::before,
-.title::after{
+/*アイコン*/
+.title::before{
     position: absolute;
-    content:'';
-    width: 15px;
-    height: 2px;
-    background-color: #333;
-    
+    content:url(../images/arrow_right.png);
 }
 .title::before{
-    top:48%;
-    left: 15px;
-    transform: rotate(0deg);
+    top: -10px;;
+    left: -4px;
+    transform: scale(0.4) rotate(0deg);
     
 }
-.title::after{    
-    top:48%;
-    left: 15px;
-    transform: rotate(90deg);
-
-}
-/*　closeというクラスがついたら形状変化　*/
+/*closeというクラスがついたら形状変化　*/
 .title.close::before{
-  transform: rotate(45deg);
+  transform: scale(0.4) rotate(90deg);
 }
 
-.title.close::after{
-  transform: rotate(-45deg);
-}
+
 
 /*アコーディオンで現れるエリア*/
 .box { display: none; }
