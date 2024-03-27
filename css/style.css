@@ -13,7 +13,7 @@
 }
 */
 
-.noto-sans-400 {
+.noto-sans-400,body {
     font-family: "Noto Sans JP", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -26,6 +26,9 @@
     font-weight: 700;
     font-style: normal;
 }
+
+.main-blue { color:#47478c; }
+.main-orange { color: #ce802d; }
 
 .text-vl { writing-mode: vertical-rl; }
 
@@ -106,7 +109,14 @@
       width: 30%;
   }
 
-
+.intro { width: 100%; position: relative; }
+.intro__wrap {display: flex; position: absolute; top: -40px; left: 15px; width: 340px; height: 220px; }
+.intro__left { width: 230px; }
+.intro__right { width: 110px; display: flex; padding-top: 22px; }
+.intro__text--l { font-size: 90px; }
+.intro__text--m { font-size: 18px; letter-spacing: 0.07em; }
+.intro__text--s { font-size: 12px; line-height: 1.5em; }
+.intro__right .intro__text--l { font-size: 83px; letter-spacing: 0.1em; position: relative; top: -6px; left: 3px;}
 
 
 /*media Queries 600px以上 タブレット用
