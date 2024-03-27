@@ -5,12 +5,17 @@ setTimeout(function(){
 
 //header_wrap
 /*
+setTimeout(function(){
+	$('.header').animate({'top':'0px'},{ duration: 'slow', easing: 'swing', });
+},3000);
+
 $(window).scroll(function () {
 	if($(window).scrollTop() > 400) {
 		$('#header_wrap').animate({'top':'0px'},{ duration: 'fast', easing: 'swing', });
 	}
 });
 */
+
 
 //メニューボタンアニメーション
 $(".openbtn6").click(function () {
@@ -64,25 +69,4 @@ $(window).on('load', function () {
 	TextTypingAnime();
 });
 
-/*
-setTimeout(function(){
-	//spanタグを追加する
-	var element = $(".TextTyping");
-	element.each(function () {
-		var text = $(this).html();
-		var textbox = "";
-		text.split('').forEach(function (t) {
-			if (t !== " ") {
-				textbox += '<span>' + t + '</span>';
-			} else {
-				textbox += t;
-			}
-		});
-		$(this).html(textbox);
-
-	});
-
-	TextTypingAnime();
-  },500);                 //何ミリ秒後に実行するか数値を入れる
-*/
 
