@@ -37,6 +37,13 @@
 .main-visual {width: 100%; position: relative; }
 .main-visual .img-mv {width: 100%; opacity: 0;}
 .main-visual h2 { position: absolute; top: 100px; left: 50%; transform: translateX(-50%); color:#fff; font-size: 22px; line-height: 2em; }
+.TextTyping span { display: none; }
+/*文字列後ろの線の設定*/
+/*.TextTyping::after { content: "|"; animation: typinganime .8s ease infinite; }*/
+@keyframes typinganime{
+	from{opacity:0}
+	to{opacity:1}
+}
 
 /*==================================================
 　ナビボタン 3本線が回転して×に
