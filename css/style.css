@@ -143,10 +143,69 @@
 .message { width: 100%; position: relative; height: auto; line-height: 1.5em; font-size:15px;}
 .message__wrap { width: 100%; background: #eaecf6 url(../images/bg_message-top.jpg) no-repeat top / 100%; padding: 60px 15px 20px 15px; position: relative; overflow: hidden; }
 .message__wrap--bottom { width: 100%; background: #eaecf6 url(../images/bg_message-bottom.jpg) no-repeat bottom / 100%; text-align: center; padding: 30px 0 114px 0; }
-.message__wrap--bottom img { width: 80%; }
+.message__wrap--bottom img { width: 76%; }
 .message__title {position: absolute; right: 55px; top: 76px; font-size: 140px; color: #fff; z-index: 1;}
 .message__text { position: relative; z-index: 2;}
 .message__img--name {padding-top: 20px;}
+
+.want { width: 100%; }
+.want__wrap {width: 100%; text-align: center; padding: 40px 15px;}
+.want__text {line-height: 1.5em; font-size:18px; font-weight: 700; color: #333;}
+
+
+/*アコーディオン全体*/
+.accordion-area{
+    list-style: none;
+    width: 96%;
+    max-width: 900px;
+    margin:0 auto;
+}
+
+.accordion-area li{
+    margin: 10px 0;
+}
+
+
+/*アコーディオンタイトル*/
+.title {
+    position: relative;/*+マークの位置基準とするためrelative指定*/
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+/*アイコンの＋と×*/
+.title::before,
+.title::after{
+    position: absolute;
+    content:'';
+    width: 15px;
+    height: 2px;
+    background-color: #333;
+    
+}
+.title::before{
+    top:48%;
+    left: 15px;
+    transform: rotate(0deg);
+    
+}
+.title::after{    
+    top:48%;
+    left: 15px;
+    transform: rotate(90deg);
+
+}
+/*　closeというクラスがついたら形状変化　*/
+.title.close::before{
+  transform: rotate(45deg);
+}
+
+.title.close::after{
+  transform: rotate(-45deg);
+}
+
+/*アコーディオンで現れるエリア*/
+.box { display: none; }
 
 
 /*media Queries 600px以上 タブレット用
