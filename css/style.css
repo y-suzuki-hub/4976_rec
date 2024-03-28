@@ -39,7 +39,7 @@
 
 
 
-.wrap {max-width: 600px;}
+.wrap {max-width: 500px;}
 .header {width: 100%; text-align: left; height: 52px; padding: 10px; position: fixed; top: 0px; z-index: 100; background-color: rgba(255, 255, 255, 0.9); box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);}
 .header .logo {width: 100px;}
 .header .logo img {width: 100%;}
