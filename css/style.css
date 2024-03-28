@@ -44,7 +44,7 @@
 .header .logo {width: 100px;}
 .header .logo img {width: 100%;}
 
-.main-visual {width: 100%; position: relative; }
+.main-visual {width: 100%; position: relative; min-height: 500px; }
 .main-visual .img-mv {width: 100%; opacity: 0;}
 .main-visual h2 { position: absolute; top: 100px; left: 50%; transform: translateX(-50%); color:#fff; font-size: 22px; line-height: 2em; }
 .TextTyping span { display: none; }
