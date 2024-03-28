@@ -39,7 +39,7 @@
 
 
 
-.wrap {max-width: 500px;}
+.wrap {max-width: 599px;}
 .header {width: 100%; text-align: left; height: 52px; padding: 10px; position: fixed; top: 0px; z-index: 100; background-color: rgba(255, 255, 255, 0.9); box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);}
 .header .logo {width: 100px;}
 .header .logo img {width: 100%;}
@@ -123,7 +123,7 @@
 .intro__text--l { font-size: 90px; }
 .intro__text--m { font-size: 18px; letter-spacing: 0.07em; }
 .intro__text--s { font-size: 12px; line-height: 1.5em; position: relative; top: -3px;}
-.intro__right .intro__text--l { font-size: 83px; letter-spacing: 0.1em; position: relative; top: -6px; left: 3px;}
+.intro__right .intro__text--l { font-size: 84px; letter-spacing: 0.1em; position: relative; top: -6px; left: 3px;}
 /* 右からフェードイン */
 
 .fadeUp{
@@ -146,7 +146,7 @@
       }
     }
 
-.message { width: 100%; position: relative; height: auto; line-height: 1.5em; font-size:15px;}
+.message { width: 100%; position: relative; height: auto; line-height: 1.6em; font-size:15px;}
 .message__wrap { width: 100%; background: #eaecf6 url(../images/bg_message-top.jpg) no-repeat top / 100%; padding: 60px 15px 20px 15px; position: relative; overflow: hidden; }
 .message__wrap--bottom { width: 100%; background: #eaecf6 url(../images/bg_message-bottom.jpg) no-repeat bottom / 100%; text-align: center; padding: 30px 0 114px 0; }
 .message__wrap--bottom img { width: 76%; }
@@ -173,6 +173,7 @@
 .theory__main { width: 100%; border-top: #e9dacb 1px solid; padding: 40px 0 70px 0; color: #333; }
 .theory__title { font-size:23px; font-weight: 700; letter-spacing: 0.1em; margin-bottom: 30px; line-height: 1.5em; }
 .theory__text { font-size: 16px; letter-spacing: 0.05em; line-height: 1.7em; }
+.theory__img {width: 100%; margin: 25px 0; }
 .theory__main--end { padding-bottom:0; }
 
 
