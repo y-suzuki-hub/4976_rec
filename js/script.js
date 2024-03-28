@@ -1,7 +1,7 @@
 //ファーストビューメイン画像 100ミリ秒後に1000ミリ秒かけてアニメーション完了
 setTimeout(function(){
 	$(".img-mv").stop().animate({opacity:'1'},1000);
-},500);
+},200);
 
 //header_wrap
 /*
@@ -18,9 +18,15 @@ $(window).scroll(function () {
 
 
 //メニューボタンアニメーション
-$(".openbtn6").click(function () {
-    $(this).toggleClass('active');
-});
+$(".openbtn6").click(function () {//ボタンがクリックされたら
+    $(this).toggleClass('active');//ボタン自身に activeクラスを付与し
+      $("#g-nav").toggleClass('panelactive');//ナビゲーションにpanelactiveクラスを付与
+  });
+  
+  $("#g-nav a").click(function () {//ナビゲーションのリンクがクリックされたら
+      $(".openbtn6").removeClass('active');//ボタンの activeクラスを除去し
+      $("#g-nav").removeClass('panelactive');//ナビゲーションのpanelactiveクラスも除去
+  });
 
 
 // TextTypingというクラス名がついている子要素（span）を表示から非表示にする定義
@@ -161,8 +167,8 @@ function PageTopAnime() {
 
 // #で始まるアンカーをクリックした場合に処理 
 $('a[href^="#"]').click(function(){
-    // 移動先を110px上にずらす
-    var adjust = -110;
+    // 移動先を90px上にずらす
+    var adjust = -90;
     // スクロールの速度
     var speed = 400; // ミリ秒
     // アンカーの値取得
