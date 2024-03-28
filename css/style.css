@@ -27,6 +27,12 @@
     font-style: normal;
 }
 
+.shippori-mincho-400 {
+    font-family: "Shippori Mincho B1", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
 .main-blue { color:#47478c; }
 .main-orange { color: #ce802d; }
 .text-vl { writing-mode: vertical-rl; }
@@ -157,10 +163,15 @@
 .theory__indextitle { background: url(../images/dotline.png) no-repeat left / 30px; font-size: 15px; padding-left: 36px; position: relative; left: -16px; }
 .theory__contents { color: #666; }
 .theory__index--head { padding-left: 24px; }
+.theory__index--head span {font-size: 13px;}
 .theory__menu { padding: 20px 0; }
 .theory__index--body { padding: 15px 0 20px 25px;}
-.theory__index--body p { padding: 0 0 15px 15px; background: url(../images/arrow_right.png) no-repeat left / 8px; background-position-y: 3px; }
-.theory__index--close { width: 100%; text-align: right; padding-top: 20px; }
+.theory__index--body p { padding: 0 0 18px 15px; background: url(../images/arrow_right.png) no-repeat left / 8px; background-position-y: 3px; text-decoration: underline solid #bbb; }
+.theory__index--close { width: 100%; text-align: right; padding-top: 20px; font-size: 14px; }
+.theory__main { width: 100%; border-top: #e9dacb 1px solid; padding: 40px 0 70px 0; color: #333; }
+.theory__title { font-size:23px; font-weight: 700; letter-spacing: 0.1em; margin-bottom: 30px; }
+.theory__text { font-size: 16px; letter-spacing: 0.05em; line-height: 1.7em; }
+
 
 /*アコーディオン全体*/
 .accordion-area{
@@ -197,7 +208,7 @@
 .title.close::before{
   transform: scale(0.4) rotate(90deg);
 }
-
+.title.close span {display: none;}
 
 
 /*アコーディオンで現れるエリア*/

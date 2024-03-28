@@ -101,6 +101,7 @@ $('.theory__index--close').on('click', function() {
 });
   
   //ページが読み込まれた際にopenクラスをつけ、openがついていたら開く動作※不必要なら下記全て削除
+  /*
   $(window).on('load', function(){
     $('.accordion-area li:first-of-type section').addClass("open"); //accordion-areaのはじめのliにあるsectionにopenクラスを追加
     $(".open").each(function(index, element){ //openクラスを取得
@@ -110,21 +111,22 @@ $('.theory__index--close').on('click', function() {
       $(Box).slideDown(500);          //アコーディオンを開く
     });
   });
+  */
 
 
-  // #で始まるアンカーをクリックした場合に処理
-  $('a[href^=#]').click(function() {
+// #で始まるアンカーをクリックした場合に処理 
+$('a[href^="#"]').click(function(){
+    // 移動先を90px上にずらす
+    var adjust = -90;
     // スクロールの速度
     var speed = 400; // ミリ秒
     // アンカーの値取得
     var href= $(this).attr("href");
     // 移動先を取得
     var target = $(href == "#" || href == "" ? 'html' : href);
-    // 移動先を数値で取得
-    var position = target.offset().top;
+    // 移動先を調整
+    var position = target.offset().top + adjust;
     // スムーススクロール
     $('body,html').animate({scrollTop:position}, speed, 'swing');
     return false;
- });
-
-
+  });
