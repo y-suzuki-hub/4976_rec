@@ -1,7 +1,7 @@
 //ファーストビューメイン画像 100ミリ秒後に1000ミリ秒かけてアニメーション完了
 setTimeout(function(){
 	$(".img-mv").stop().animate({opacity:'1'},1000);
-},100);
+},500);
 
 //header_wrap
 /*
@@ -101,7 +101,6 @@ $('.theory__index--close').on('click', function() {
 });
   
   //ページが読み込まれた際にopenクラスをつけ、openがついていたら開く動作※不必要なら下記全て削除
-  /*
   $(window).on('load', function(){
     $('.accordion-area li:first-of-type section').addClass("open"); //accordion-areaのはじめのliにあるsectionにopenクラスを追加
     $(".open").each(function(index, element){ //openクラスを取得
@@ -111,7 +110,7 @@ $('.theory__index--close').on('click', function() {
       $(Box).slideDown(500);          //アコーディオンを開く
     });
   });
-  */
+  
 
   $(function() {
     var offset = $('#nav-4976').offset();
@@ -130,7 +129,7 @@ $('.theory__index--close').on('click', function() {
 //ページ上部へ　スクロールした際の動きを関数でまとめる
 function PageTopAnime() {
     var scroll = $(window).scrollTop();
-    if (scroll >= 300){//上から200pxスクロールしたら
+    if (scroll >= 1200){//上から1200pxスクロールしたら
       $('#page-top').removeClass('DownMove');//#page-topについているDownMoveというクラス名を除く
       $('#page-top').addClass('UpMove');//#page-topについているUpMoveというクラス名を付与
     }else{

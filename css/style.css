@@ -160,6 +160,7 @@
 
 .theory { width: 100%; position: relative; font-size:15px; }
 .theory__wrap {width: 100%;  padding: 40px 15px; background: #fcf7f2 url(../images/bg_4976-top.jpg) no-repeat top / 100%; }
+.theory__h3wrap {height:18px;}
 .theory__indextitle { background: url(../images/dotline.png) no-repeat left / 30px; font-size: 15px; padding-left: 36px; position: relative; left: -16px; }
 .theory__contents { color: #666; }
 .theory__index--head { padding-left: 24px; }
@@ -217,7 +218,7 @@
 /*固定用css*/
 .fixed {
     position: fixed;
-    top: 65px; left:0;
+    top: 65px; left:-1px;
     width: 100%;
   }
 
