@@ -1,7 +1,7 @@
-//ファーストビューメイン画像 100ミリ秒後に1000ミリ秒かけてアニメーション完了
+//ファーストビューメイン画像 300ミリ秒後に1000ミリ秒かけてアニメーション完了
 setTimeout(function(){
 	$(".img-mv").stop().animate({opacity:'1'},1000);
-},200);
+},300);
 
 //header_wrap
 /*
@@ -75,7 +75,7 @@ $(window).on('load', function () {
 	TextTypingAnime();
 });
 
-//アコーディオンをクリックした時の動作
+//4976理論アコーディオンをクリックした時の動作
 $('.title').on('click', function() {//タイトル要素をクリックしたら
     var findElm = $(this).next(".box");//直後のアコーディオンを行うエリアを取得し
     $(findElm).slideToggle();//アコーディオンの上下動作
@@ -88,13 +88,6 @@ $('.title').on('click', function() {//タイトル要素をクリックしたら
   });
 
 //目次を閉じるをクリックした時の動作
-/*
-$('.theory__index--close').on('click', function() {
-    $('.box').slideToggle();//アコーディオンの上下動作
-    $('.title').addClass('close');//クラス名closeを付与
-  });
-  */
-
   $('.theory__index--close').on('click', function() {
     var $title = $('.box').prev('.title'); // .boxの直前の.title要素を選択
     $('.box').slideToggle(); // アコーディオンの上下動作
