@@ -159,7 +159,8 @@
 .want__text {line-height: 1.5em; font-size:18px; font-weight: 700; color: #333;}
 
 .theory { width: 100%; position: relative; font-size:15px; }
-.theory__wrap {width: 100%;  padding: 40px 15px; background: #fcf7f2 url(../images/bg_4976-top.jpg) no-repeat top / 100%; }
+.theory__wrap {width: 100%;  padding: 40px 15px 0 15px;; background: #fcf7f2 url(../images/bg_4976-top.jpg) no-repeat top / 100%; }
+.theory__wrap--bottom {width: 100%;  padding: 50px 15px; background: #fcf7f2 url(../images/bg_4976-bottom.jpg) no-repeat bottom / 100%; }
 .theory__h3wrap {height:18px;}
 .theory__indextitle { background: url(../images/dotline.png) no-repeat left / 30px; font-size: 15px; padding-left: 36px; position: relative; left: -16px; }
 .theory__contents { color: #666; }
@@ -170,8 +171,9 @@
 .theory__index--body p { padding: 0 0 18px 15px; background: url(../images/arrow_right.png) no-repeat left / 8px; background-position-y: 3px; text-decoration: underline solid #bbb; }
 .theory__index--close { width: 100%; text-align: right; padding-top: 20px; font-size: 14px; }
 .theory__main { width: 100%; border-top: #e9dacb 1px solid; padding: 40px 0 70px 0; color: #333; }
-.theory__title { font-size:23px; font-weight: 700; letter-spacing: 0.1em; margin-bottom: 30px; }
+.theory__title { font-size:23px; font-weight: 700; letter-spacing: 0.1em; margin-bottom: 30px; line-height: 1.5em; }
 .theory__text { font-size: 16px; letter-spacing: 0.05em; line-height: 1.7em; }
+.theory__main--end { padding-bottom:0; }
 
 
 /*アコーディオン全体*/
@@ -296,6 +298,7 @@
 ----------------------------------------------------*/
 @media screen and (min-width: 600px) {
 /*タブレット版のスタイルを記述*/
+.disp_sp { display: none }
 
 }
 
@@ -303,5 +306,6 @@
 ----------------------------------------------------*/
 @media screen and (min-width: 1025px) {
 /*PC版のスタイルを記述*/
+.disp_sp { display: none }
 
 }
