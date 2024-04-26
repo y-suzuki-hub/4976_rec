@@ -12,10 +12,10 @@ $('#count-up01').on('inview', function(event, isInView) {
 		            $(this).text(Math.ceil(now));
 		        }
 		    });
-            $('.canma').addClass('is-animated');
+            $('#count-up01 .canma').addClass('is-animated');
 		});
 	} else {
-		$('.canma').removeClass('is-animated');
+		$('#count-up01 .canma').removeClass('is-animated');
 	}
 });
 
@@ -33,9 +33,10 @@ $('#count-up02').on('inview', function(event, isInView) {
 		            $(this).text(Math.ceil(now));
 		        }
 		    });
+			$('#count-up02 .canma').addClass('is-animated');
 		});
 	} else {
-		$('.canma').removeClass('is-animated');
+		$('#count-up02 .canma').removeClass('is-animated');
 	}
 });
 
@@ -53,10 +54,10 @@ $('#count-up03').on('inview', function(event, isInView) {
 		            $(this).text(Math.ceil(now));
 		        }
 		    });
-            $('.canma').addClass('is-animated');
+            $('#count-up03 .canma').addClass('is-animated');
 		});
 	} else {
-		$('.canma').removeClass('is-animated');
+		$('#count-up03 .canma').removeClass('is-animated');
 	}
 });
 
@@ -74,9 +75,9 @@ $('#count-up04').on('inview', function(event, isInView) {
 		            $(this).text(Math.ceil(now));
 		        }
 		    });
-            $('.canma').addClass('is-animated');
+            $('#count-up04 .canma').addClass('is-animated');
 		});
 	} else {
-		$('.canma').removeClass('is-animated');
+		$('#count-up04 .canma').removeClass('is-animated');
 	}
 });
