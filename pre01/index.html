@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>数字カウントUP</title>
+    <title>見せ方表現のデモ</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
     <link href="css/destyle.css" rel="stylesheet" />
     <style>
@@ -12,64 +12,19 @@
     font-optical-sizing: auto;
     font-style: normal;
 }
+ul {padding: 20px; }
+li a {text-decoration: underline; color: rgb(80, 117, 197);}
     </style>
 </head>
 <body>
-    <div style="text-align: center; margin-top: 50px; font-size: 30px;line-height: 1.8em;">【数字カウントUP】<br>スクロールしてください<br>↓<br>↓<br>↓</div>
-    <div class="wrap">
-        <div id="count-up01" class="count-up">
-            <span class="count-up-item count-size">120000</span><span class="canma count-up01-1">,</span>
-            <p>地域のお客様の数</p>
-        </div>
-
-        <div id="count-up02"  class="count-up">
-            <span class="count-up-item count-size">6000000000</span><span class="canma count-up02-1">,</span><span class="canma count-up02-2">,</span><span class="canma count-up02-3">,</span>
-            <p>2023年の売上実績=心のうるおい度数</p>
-        </div>
-
-        <div id="count-up03"  class="count-up">
-            <span class="count-up-item count-size">100000</span><span class="canma count-up03-1">,</span>
-            <p>自動車買取実績台数</p>
-        </div>
-
-        <div id="count-up04"  class="count-up">
-            <span class="count-up-item count-size">230000</span><span class="canma count-up04-1">,</span>
-            <p>湘南える新聞月間発行部数</p>
-        </div>
-            
-            
+    <div style="text-align: left; margin-top: 50px; font-size: 30px;line-height: 1.8em;">
+        <h1>【見せ方表現のデモ】</h1>
+        <ul>
+            <li><a href="count.html">数字カウントUP</a></li>
+        </ul>
     </div>
-<style>
-.wrap{max-width: 390px; background-color: #1b2265; color: white; font-weight: bold; padding:100px 16px; text-align: right; font-size: 20px; margin-top: 600px;}
-.count-up {margin-bottom: 100px; position: relative;}
-.count-up .count-up-item{font-size: 30px; font-size: 55px; letter-spacing: 0.03em;}
-.count-up p {margin-top: 10px; padding-right: 6px;}
-.count-up .canma { position: absolute; opacity: 0; top: 34px; }
-.count-up .canma.count-up01-1 { right: 100px;}
-.count-up .canma.count-up02-1 { right: 303px;}
-.count-up .canma.count-up02-2 { right: 202px;}
-.count-up .canma.count-up02-3 { right: 100px;}
-.count-up .canma.count-up03-1 { right: 100px;}
-.count-up .canma.count-up04-1 { right: 100px;}
-.count-up .canma.is-animated {
-  animation: zoomIn 1.0s ease forwards;
-}
- 
-@keyframes zoomIn {
-  0% {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-</style>
+            
+            
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
-<!--自作のJS-->
-<script src="js/count.js"></script>
 </body>
 </html>
