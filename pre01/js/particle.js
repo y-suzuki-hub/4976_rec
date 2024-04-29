@@ -1,5 +1,5 @@
 $(function() {
-        setTimeout(function () {
+        // setTimeout(function () {
             particlesJS("particles-js",{
             "particles":{
                 "number":{
@@ -73,7 +73,7 @@ $(function() {
                 },
                 "retina_detect":true
             });
-        }, 1300);//この場合1秒後
+        // }, 1300);//この場合1秒後
     
     });
 

@@ -16,12 +16,23 @@
 </head>
 <body>
     <div class="wrap">
+      <header class="header">
+        <h1 class="head-logo">4976 RECRUIT</h1>
+        <div class="openbtn"><span></span><span></span><span></span></div>
+      </header>
       <div id="wrapper">
+        
         <canvas id="particle"></canvas>
       </div>
     </div>
+
+
+
+
 <style>
 .wrap{width: 100%;}
+.header {width: 100%; text-align: left; padding:12px;}
+.header .head-logo { color: white; }
 #wrapper{
 /*描画されるテキストを中央寄せにする*/
 	display:flex;
@@ -53,11 +64,75 @@
       90% {background:#da0b4e;}
       100% {background:#f18d00;}
  }
+
+ .openbtn{
+	/*ボタン内側の基点となるためrelativeを指定。
+追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
+	position: fixed;
+  right: 0; top: 0;
+	cursor: pointer;
+    width: 70px;
+    height:50px;
+}
+
+/*ボタン内側*/
+.openbtn span{
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+    right: 14px;
+    height: 2px;
+    border-radius: 2px;
+	background: #fff;
+  }
+
+
+.openbtn span:nth-of-type(1) {
+	top:15px;	
+  	width: 20%;
+}
+
+.openbtn span:nth-of-type(2) {
+	top:23px;
+  	width: 35%;
+}
+
+.openbtn span:nth-of-type(3) {
+	top:31px;
+  	width: 45%;
+}
+
+/*activeクラスが付与されると線が回転して×になる*/
+
+.openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 30px;
+    transform: translateY(6px) rotate(-135deg);
+    width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3){
+    top: 30px;
+    left: 30px;
+    transform: translateY(-6px) rotate(135deg);
+    width: 30%;
+}
 </style>
+
+
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="js/particleText.js"></script>
 <!--自作のJS-->
 <script src="js/fv-01.js"></script>
+<script>
+  $(".openbtn").click(function () {
+  $(this).toggleClass('active');
+  });
+</script>
 </body>
 </html>
