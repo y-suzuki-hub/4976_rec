@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+/*========= レイアウトのためのCSS ===============*/
+
+body{
+	background:#f6f6f6;
+}
+
+.wrapper{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	
+}
+
+/*SVGのサイズ*/
+svg{
+	max-width:800px;/*SVGタグの横幅*/
+	width:100%;/* レスポンシブ対応にするため100%を指定*/
+	height:auto;
+}
+
+
+/*========= 手書き風にするためのCSS ===============*/
+
+/* マスクをするパスの設定*/
+#mask .st0{
+    fill:none;
+    stroke:#FFFFFF;
+    stroke-width:122;/*線の太さを指定する*/
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-miterlimit:10;
+    stroke-dasharray: 1500; /* 線の間隔を指定する */
+    stroke-dashoffset:1500; /* 線の位置を指定する */
+}

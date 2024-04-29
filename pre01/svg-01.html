@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字カウントUP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link href="css/destyle.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/9-4-2.css">
+    <style>
+    body {
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+
+        <div class="svg-wrap" style="position: relative; width: 100%; margin: 0 auto; background-color: white; overflow: hidden; height: 390px;">
+
+          <div id="count-up01" class="count-up">
+            <span class="count-up-item count-size">40</span><span class="">期 over</span>
+            <span style="font-style: italic;">!!</span>
+            <p>右肩上がり</p>
+          </div>
+
+          <svg style="
+          position: relative;
+            left: -50%;
+            width: 150%; top: -50px;
+          ;" id="mask" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="527.67" height="397.57" viewBox="0 0 527.67 397.57" style="enable-background:new 0 0 739 258.9;" xml:space="preserve">	
+          
+            <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="svg/text.svg" width="527.67" height="397.57" mask="url(#clipmask)"></image>
+              
+            <mask id="clipmask" maskUnits="objectBoundingBox">
+            
+              <path class="st0" d="M0,397.57s73.51-4.66,133.65-57.14,40.47-69.3,80.94-97.61,85.7-27.38,107.13-45.23,38.09-69.04,72.61-92.85,76.18-32.14,96.42-42.85S527.67,0,527.67,0"/>
+              <!-- <line class="st0" x1="0" y1="0" x2="596" y2="486"/> -->
+              <!-- <line class="st0" x1="490.5" y1="50.6" x2="459.9" y2="103.6"/> -->
+            
+            </mask>  
+          </svg>
+        </div>
+
+        <a onclick="window.location.reload(true);" style="color: white; color: white;
+        display: block;
+        text-align: center;
+        margin: 20px auto;
+        font-weight: 100;
+        cursor: pointer;">
+          <i class="fa fa-refresh" aria-hidden="true"></i><span>更新</span>
+        </a>
+
+        
+            
+            
+    </div>
+<style>
+.wrap{max-width: 390px; background-color: #1b2265; color: #1b2265; font-weight: bold; padding:100px 10px; text-align: right; font-size: 20px;}
+.count-up {margin-bottom: 0; position: relative; text-align: left; font-size: 30px; padding-left: 10px;}
+.count-up .count-up-item{ font-size: 100px; letter-spacing: 0.03em;}
+.count-up p {margin-top: 10px; padding-right: 6px;}
+.count-up .canma { position: absolute; opacity: 0; top: 34px; }
+.count-up .canma.count-up01-1 { right: 100px;}
+.count-up .canma.is-animated {
+  animation: zoomIn 1.0s ease forwards;
+}
+ 
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+</style>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
+<script src="js/9-4-2.js"></script>
+<!--自作のJS-->
+<script src="js/count.js"></script>
+</body>
+</html>
