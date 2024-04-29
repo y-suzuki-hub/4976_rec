@@ -21,6 +21,7 @@
 
         <div class="svg-wrap" style="position: relative; width: 100%; margin: 0 auto; background-color: white; overflow: hidden; height: 390px;">
 
+          <div id="particles-js"></div>
 
           <div id="count-up01" class="count-up">
             <span class="count-up-item count-size">40</span><span class="">期 over</span>
@@ -81,6 +82,13 @@
   }
 }
 
+#particles-js{ 
+	position:absolute;
+	z-index:1;/*描画を一番下に*/
+	width: 100%;
+	height: 100%;
+	background-color:#fff;
+}
 
 
 </style>
@@ -88,8 +96,10 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script src="js/9-4-2.js"></script>
 <!--自作のJS-->
 <script src="js/count.js"></script>
+<script src="js/particle.js"></script>
 </body>
 </html>
