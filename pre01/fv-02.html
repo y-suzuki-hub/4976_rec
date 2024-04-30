@@ -139,8 +139,8 @@
 
 
 <style>
-.wrap{width: 100%;}
-.header {width: 100%; text-align: left; padding:12px;}
+.wrap{width: 100%; max-width: 800px;}
+.header {width: 100%; text-align: left; padding:12px; position: relative;}
 .header .head-logo { color: white; }
 #wrapper{
 /*描画されるテキストを中央寄せにする*/
@@ -177,7 +177,7 @@
  .openbtn{
 	/*ボタン内側の基点となるためrelativeを指定。
 追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
-	position: fixed;
+	position: absolute;
   right: 0; top: 0;
 	cursor: pointer;
     width: 70px;
@@ -295,6 +295,10 @@ svg{
 	height:auto;
 }
 
+@media screen and (min-width: 600px) {
+    svg {width:85%;}
+}
+
 #mask path{
     /* fill: #00a0e9; */
 fill:none;
@@ -321,13 +325,13 @@ animation: line 5s 0.4s forwards;
 .test-slick {
     width: 94%;
     max-width: 800px;
-    margin: 10px auto;
+    margin: 6px auto;
 }
 
 .test-slick__item {
-    margin-right: 5px;
-    margin-left: 5px;
-    border-radius: 5px;
+    margin-right: 3px;
+    margin-left: 3px;
+    border-radius: 3px;
     overflow: hidden;
 }
 
