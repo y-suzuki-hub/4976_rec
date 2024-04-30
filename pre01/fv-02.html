@@ -238,7 +238,7 @@
     /*描画位置※位置は適宜調整してください*/
 	position:absolute;
 	left:50%;
-	bottom:10px;
+	bottom:80px;
     /*全体の高さ*/
 	height:50px;
 }
@@ -340,7 +340,23 @@ animation: line 5s 0.4s forwards;
     width: 100%;
 }
 
+.slide-wrap { opacity: 0; }
 
+.fadeIn{
+animation-name:fadeInAnime;
+animation-duration:2s;
+animation-fill-mode:forwards;
+}
+
+@keyframes fadeInAnime{
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
 
 
 </style>
@@ -356,6 +372,10 @@ animation: line 5s 0.4s forwards;
   $(".openbtn").click(function () {
   $(this).toggleClass('active');
   });
+
+  setTimeout(function () {
+    $('.slide-wrap').addClass('fadeIn');
+}, 800);
 </script>
 </body>
 </html>
