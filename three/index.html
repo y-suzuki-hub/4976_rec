@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link href="../pre01/css/destyle.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../pre01/css/reset.css">
+    <title>Three</title>
+    <style>
+        body {
+        font-family: "Noto Sans JP", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+        </style>
+</head>
+<body>
+    <div class="wrap">
+
+        <div class="growth">
+
+            <div id="count-up01" class="count-up">
+                <span class="count-up-item count-size">40</span><span class="">期 over</span>
+                <span style="font-style: italic;">!!</span>
+                <p>右肩上がり</p>
+              </div>
+
+            <div id="three-container"></div>
+
+        </div>
+
+        <a onclick="window.location.reload(true);" style="color: white;
+        display: block;
+        text-align: center;
+        margin: 70px auto;
+        font-weight: 100;
+        cursor: pointer;">
+          <i class="fa fa-refresh" aria-hidden="true"></i><span>更新</span>
+        </a>
+        
+    </div>
+    
+
+    <style>
+        body {
+	margin: 0;
+	overflow: hidden;
+}
+.wrap { background-color: #1b2265; max-width: 390px; padding: 100px 10px; }
+.growth { position: relative; min-height: 390px; background-color: #eee; color: #1b2265; font-weight: bold;}
+canvas {
+	/* background-image: radial-gradient(#666, #333); */
+    width: 100% !important;
+    height: auto !important;
+    position: relative;
+    top: 67px;
+}
+.count-up {margin-bottom: 0; position: absolute; text-align: left; font-size: 30px; padding-left: 10px; z-index: 2;}
+.count-up .count-up-item{ font-size: 100px; letter-spacing: 0.03em;}
+.count-up p {margin-top: 10px; padding-right: 6px;}
+.count-up .canma { position: absolute; opacity: 0; top: 34px; }
+.count-up .canma.count-up01-1 { right: 100px;}
+.count-up .canma.is-animated {
+  animation: zoomIn 1.0s ease forwards;
+}
+ 
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/three.js/r75/three.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/bas.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/OrbitControls-2.js"></script>
+    <script src="../pre01/js/count.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

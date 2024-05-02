@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fv-02</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link href="css/destyle.css" rel="stylesheet" />
+    <style>
+    body {
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+      <header class="header">
+        <h1 class="head-logo">4976 RECRUIT</h1>
+        <div class="openbtn"><span></span><span></span><span></span></div>
+      </header>
+      <div id="wrapper">
+
+        <!-- lottieWebの読み込み -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+
+        <!-- アニメーションを入れるDOM要素 -->
+        <div id= "animation" style="margin: auto;"></div>
+        
+        <script>
+           const animation = document.getElementById('animation');
+           
+           lottie.loadAnimation({
+           container: animation,
+           renderer: 'svg',
+           loop: false,
+           autoplay: true,
+           path: 'svg/data-outline.json'
+           });
+           </script>
+
+          
+      </div>
+
+      <div class="slide-wrap">
+        <div class="test-slick js-slick01">
+          <div class="test-slick__item"><img src="images/img01.jpg" alt=""></div>
+          <div class="test-slick__item"><img src="images/img02.jpg" alt=""></div>
+          <div class="test-slick__item"><img src="images/img03.jpg" alt=""></div>
+          <div class="test-slick__item"><img src="images/img04.jpg" alt=""></div>
+          <div class="test-slick__item"><img src="images/img05.jpg" alt=""></div>
+          <div class="test-slick__item"><img src="images/img06.jpg" alt=""></div>
+          <div class="test-slick__item"><img src="images/img07.jpg" alt=""></div>
+          <div class="test-slick__item"><img src="images/img08.jpg" alt=""></div>
+          <div class="test-slick__item"><img src="images/img09.jpg" alt=""></div>
+          <div class="test-slick__item"><img src="images/img10.jpg" alt=""></div>
+          <div class="test-slick__item"><img src="images/img11.jpg" alt=""></div>
+          <div class="test-slick__item"><img src="images/img12.jpg" alt=""></div>
+      </div>
+      <div class="test-slick js-slick02" dir="rtl">
+        <div class="test-slick__item"><img src="images/img13.jpg" alt=""></div>
+        <div class="test-slick__item"><img src="images/img14.jpg" alt=""></div>
+        <div class="test-slick__item"><img src="images/img15.jpg" alt=""></div>
+        <div class="test-slick__item"><img src="images/img16.jpg" alt=""></div>
+        <div class="test-slick__item"><img src="images/img17.jpg" alt=""></div>
+        <div class="test-slick__item"><img src="images/img18.jpg" alt=""></div>
+        <div class="test-slick__item"><img src="images/img19.jpg" alt=""></div>
+        <div class="test-slick__item"><img src="images/img20.jpg" alt=""></div>
+        <div class="test-slick__item"><img src="images/img21.jpg" alt=""></div>
+        <div class="test-slick__item"><img src="images/img22.jpg" alt=""></div>
+        <div class="test-slick__item"><img src="images/img23.jpg" alt=""></div>
+        <div class="test-slick__item"><img src="images/img24.jpg" alt=""></div>
+      </div>
+      <div class="test-slick js-slick03">
+        <div class="test-slick__item"><img src="images/img25.jpg" alt=""></div>
+        <div class="test-slick__item"><img src="images/img26.jpg" alt=""></div>
+        <div class="test-slick__item"><img src="images/img27.jpg" alt=""></div>
+        <div class="test-slick__item"><img src="images/img28.jpg" alt=""></div>
+        <div class="test-slick__item"><img src="images/img29.jpg" alt=""></div>
+        <div class="test-slick__item"><img src="images/img30.jpg" alt=""></div>
+        <div class="test-slick__item"><img src="images/img31.jpg" alt=""></div>
+        <div class="test-slick__item"><img src="images/img32.jpg" alt=""></div>
+        <div class="test-slick__item"><img src="images/img33.jpg" alt=""></div>
+        <div class="test-slick__item"><img src="images/img34.jpg" alt=""></div>
+        <div class="test-slick__item"><img src="images/img35.jpg" alt=""></div>
+        <div class="test-slick__item"><img src="images/img36.jpg" alt=""></div>
+      </div>
+              
+      </div>
+    </div>
+
+
+
+
+<style>
+.wrap{width: 100%; max-width: 800px;}
+.header {width: 100%; text-align: left; padding:12px; position: relative;}
+.header .head-logo { color: white; }
+#wrapper{
+/*描画されるテキストを中央寄せにする*/
+	display:flex;
+	justify-content: center;
+	align-items: center; width: 100%; padding: 50px;
+  /* background-color:#f18d00; */
+}
+
+#particle{
+    width:100%;
+	height: 100vh;
+	vertical-align: bottom;/*canvasタグ下に余白が生まれるのを防ぐ*/
+}
+
+.wrap{
+	animation: bgchange 60s ease infinite;/*変化の時間を変更したい場合は20sの部分を好きな時間に変更*/
+}
+@keyframes bgchange{
+      0% {background:#da6a0b;}
+      10% {background:#f18d00;}
+      18% {background:#daca0b;}
+      20% {background:#8bda0b;}
+      30% {background:#18da0b;}
+      40% {background:#0bdaaa;}
+      50% {background:#0ba1da;}
+      60% {background:#0b38da;}
+      70% {background:#810bda;}
+      80% {background:#da0b9a;}
+      90% {background:#da0b4e;}
+      100% {background:#f18d00;}
+ }
+
+ .openbtn{
+	/*ボタン内側の基点となるためrelativeを指定。
+追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
+	position: absolute;
+  right: 0; top: 0;
+	cursor: pointer;
+    width: 70px;
+    height:50px;
+}
+
+/*ボタン内側*/
+.openbtn span{
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+    right: 14px;
+    height: 2px;
+    border-radius: 2px;
+	background: #fff;
+  }
+
+
+.openbtn span:nth-of-type(1) {
+	top:15px;	
+  	width: 20%;
+}
+
+.openbtn span:nth-of-type(2) {
+	top:23px;
+  	width: 35%;
+}
+
+.openbtn span:nth-of-type(3) {
+	top:31px;
+  	width: 45%;
+}
+
+/*activeクラスが付与されると線が回転して×になる*/
+
+.openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 30px;
+    transform: translateY(6px) rotate(-135deg);
+    width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3){
+    top: 30px;
+    left: 30px;
+    transform: translateY(-6px) rotate(135deg);
+    width: 30%;
+}
+
+/*====== 9-1-1 縦線が動いてスクロールを促す =======*/
+
+/*スクロールダウン全体の場所*/
+.scrolldown1{
+    /*描画位置※位置は適宜調整してください*/
+	position:absolute;
+	left:50%;
+	bottom:80px;
+    /*全体の高さ*/
+	height:50px;
+}
+
+/*Scrollテキストの描写*/
+.scrolldown1 span{
+    /*描画位置*/
+	position: absolute;
+	left:-15px;
+	top: -15px;
+    /*テキストの形状*/
+	color: #eee;
+	font-size: 0.7rem;
+	letter-spacing: 0.05em;
+}
+
+/* 線の描写 */
+.scrolldown1::after{
+	content: "";
+    /*描画位置*/
+	position: absolute;
+	top: 0;
+    /*線の形状*/
+	width: 1px;
+	height: 30px;
+	background: #eee;
+    /*線の動き1.4秒かけて動く。永遠にループ*/
+	animation: pathmove 1.4s ease-in-out infinite;
+	opacity:0;
+}
+
+/*高さ・位置・透過が変化して線が上から下に動く*/
+@keyframes pathmove{
+	0%{
+		height:0;
+		top:0;
+		opacity: 0;
+	}
+	30%{
+		height:30px;
+		opacity: 1;
+	}
+	100%{
+		height:0;
+		top:50px;
+		opacity: 0;
+	}
+}
+
+/*SVGのサイズ*/
+svg{
+	max-width:800px;/*SVGタグの横幅*/
+	width:150%;/*レスポンシブ対応にするため100%を指定*/
+	height:auto;
+}
+
+@media screen and (min-width: 600px) {
+    svg {width:85%;}
+}
+
+#mask path{
+    /* fill: #00a0e9; */
+fill:none;
+stroke:#ffffff;
+stroke-width:7;
+stroke-linecap:round;
+stroke-linejoin:round;
+stroke-miterlimit:10;
+stroke-dasharray: 1500; /* 線の間隔を指定する */
+stroke-dashoffset:1500; /* 線の位置を指定する */
+/* stroke-dasharray: 1800px;
+stroke-dashoffset: 1800px; */
+animation: line 5s 0.4s forwards;
+}
+
+@keyframes line{
+0%{stroke-dashoffset: 1500px;}
+100%{stroke-dashoffset: 0;}
+}
+
+.slide-wrap{width: 100%; 
+    /* background-color: #f7eed3;  */
+    color: white; font-weight: bold; padding:30px 0; text-align: center; font-size: 20px;}
+.test-slick {
+    width: 94%;
+    max-width: 800px;
+    margin: 6px auto;
+}
+
+.test-slick__item {
+    margin-right: 3px;
+    margin-left: 3px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.test-slick__item img {
+    height: auto;
+    width: 100%;
+}
+
+.slide-wrap { opacity: 0; }
+
+.fadeIn{
+animation-name:fadeInAnime;
+animation-duration:2s;
+animation-fill-mode:forwards;
+}
+
+@keyframes fadeInAnime{
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+</style>
+
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="js/particleText.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/test-slick.js"></script>
+<script src="js/fv-01.js"></script>
+<script>
+  $(".openbtn").click(function () {
+  $(this).toggleClass('active');
+  });
+
+  setTimeout(function () {
+    $('.slide-wrap').addClass('fadeIn');
+}, 800);
+</script>
+</body>
+</html>
