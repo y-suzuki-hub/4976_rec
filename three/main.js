@@ -17,7 +17,7 @@ function init() {
 
   var slide = new Slide(width, height, 'out');
 	var l1 = new THREE.ImageLoader();
-	l1.setCrossOrigin('Anonymous');
+	l1.setCrossOrigin('anonymous');
 	l1.load('coins-bg.png', function(img) {
 	  slide.setImage(img);
 	})
@@ -25,7 +25,7 @@ function init() {
 
   var slide2 = new Slide(width, height, 'in');
   var l2 = new THREE.ImageLoader();
-	l2.setCrossOrigin('Anonymous');
+	l2.setCrossOrigin('anonymous');
 	l2.load('coins-front.png', function(img) {
 		slide2.setImage(img);
 	})
@@ -387,45 +387,45 @@ function createTweenScrubber(tween, seekSpeed) {
   var _cx = 0;
 
   // desktop
-  var mouseDown = false;
+  // var mouseDown = false;
 //   document.body.style.cursor = 'pointer';
 
-  window.addEventListener('mousedown', function(e) {
-    mouseDown = true;
-    // document.body.style.cursor = 'ew-resize';
-    _cx = e.clientX;
-    stop();
-  });
-  window.addEventListener('mouseup', function(e) {
-    mouseDown = false;
-    // document.body.style.cursor = 'pointer';
-    resume();
-  });
-  window.addEventListener('mousemove', function(e) {
-    if (mouseDown === true) {
-      var cx = e.clientX;
-      var dx = cx - _cx;
-      _cx = cx;
+  // window.addEventListener('mousedown', function(e) {
+  //   mouseDown = true;
+  //   // document.body.style.cursor = 'ew-resize';
+  //   _cx = e.clientX;
+  //   stop();
+  // });
+  // window.addEventListener('mouseup', function(e) {
+  //   mouseDown = false;
+  //   // document.body.style.cursor = 'pointer';
+  //   resume();
+  // });
+  // window.addEventListener('mousemove', function(e) {
+  //   if (mouseDown === true) {
+  //     var cx = e.clientX;
+  //     var dx = cx - _cx;
+  //     _cx = cx;
 
-      seek(dx);
-    }
-  });
+  //     seek(dx);
+  //   }
+  // });
   // mobile
-  window.addEventListener('touchstart', function(e) {
-    _cx = e.touches[0].clientX;
-    stop();
-    e.preventDefault();
-  });
-  window.addEventListener('touchend', function(e) {
-    resume();
-    e.preventDefault();
-  });
-  window.addEventListener('touchmove', function(e) {
-    var cx = e.touches[0].clientX;
-    var dx = cx - _cx;
-    _cx = cx;
+  // window.addEventListener('touchstart', function(e) {
+  //   _cx = e.touches[0].clientX;
+  //   stop();
+  //   e.preventDefault();
+  // });
+  // window.addEventListener('touchend', function(e) {
+  //   resume();
+  //   e.preventDefault();
+  // });
+  // window.addEventListener('touchmove', function(e) {
+  //   var cx = e.touches[0].clientX;
+  //   var dx = cx - _cx;
+  //   _cx = cx;
 
-    seek(dx);
-    e.preventDefault();
-  });
+  //   seek(dx);
+  //   e.preventDefault();
+  // });
 }
