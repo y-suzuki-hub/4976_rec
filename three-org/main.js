@@ -8,44 +8,31 @@ function init() {
     fov: 80
   });
 
-  root.renderer.setClearColor(0xeeeeee, 0);
+  root.renderer.setClearColor(0x000000, 0);
   root.renderer.setPixelRatio(window.devicePixelRatio || 1);
   root.camera.position.set(0, 0, 60);
 
   var width = 100;
   var height = 60;
-  var image1 = '';
-  var image2 = '';
-
-  
-    // UserAgentからのスマホ判定
-    // if (navigator.userAgent.match(/iPhone|Android.+Mobile/)) {
-    //   image1 = 'coins-bg.png';
-    //   image2 = 'coins-front.png';
-    //       } else {
-    //   image1 = 'coins-bg.png';
-    //   image2 = 'coins-front.png';
-    // }
-  
 
   var slide = new Slide(width, height, 'out');
 	var l1 = new THREE.ImageLoader();
-	l1.setCrossOrigin('anonymous');
-	l1.load('coins-bg.png', function(img) {
+	l1.setCrossOrigin('Anonymous');
+	l1.load('https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/winter.jpg', function(img) {
 	  slide.setImage(img);
 	})
   root.scene.add(slide);
 
   var slide2 = new Slide(width, height, 'in');
   var l2 = new THREE.ImageLoader();
-	l2.setCrossOrigin('anonymous');
-	l2.load('coins-front.png', function(img) {
+	l2.setCrossOrigin('Anonymous');
+	l2.load('https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/spring.jpg', function(img) {
 		slide2.setImage(img);
 	})
 	
   root.scene.add(slide2);
 
-  var tl = new TimelineMax({repeat:0, repeatDelay:1.0, yoyo: true});
+  var tl = new TimelineMax({repeat:-1, repeatDelay:1.0, yoyo: true});
 
   tl.add(slide.transition(), 0);
   tl.add(slide2.transition(), 0);
@@ -286,8 +273,6 @@ function THREERoot(params) {
     params.zfar
   );
 
-  // this.camera = new THREE.PerspectiveCamera(45, (window.innerWidth * 2 ) / window.innerHeight, 10, 100);
-
   this.scene = new THREE.Scene();
 
   if (params.createCameraControls) {
@@ -300,7 +285,7 @@ function THREERoot(params) {
   this.resize();
   this.tick();
 
-  // window.addEventListener('resize', this.resize, false);
+  window.addEventListener('resize', this.resize, false);
 }
 THREERoot.prototype = {
   tick: function () {
@@ -402,45 +387,45 @@ function createTweenScrubber(tween, seekSpeed) {
   var _cx = 0;
 
   // desktop
-  // var mouseDown = false;
-//   document.body.style.cursor = 'pointer';
+  var mouseDown = false;
+  document.body.style.cursor = 'pointer';
 
-  // window.addEventListener('mousedown', function(e) {
-  //   mouseDown = true;
-  //   // document.body.style.cursor = 'ew-resize';
-  //   _cx = e.clientX;
-  //   stop();
-  // });
-  // window.addEventListener('mouseup', function(e) {
-  //   mouseDown = false;
-  //   // document.body.style.cursor = 'pointer';
-  //   resume();
-  // });
-  // window.addEventListener('mousemove', function(e) {
-  //   if (mouseDown === true) {
-  //     var cx = e.clientX;
-  //     var dx = cx - _cx;
-  //     _cx = cx;
+  window.addEventListener('mousedown', function(e) {
+    mouseDown = true;
+    document.body.style.cursor = 'ew-resize';
+    _cx = e.clientX;
+    stop();
+  });
+  window.addEventListener('mouseup', function(e) {
+    mouseDown = false;
+    document.body.style.cursor = 'pointer';
+    resume();
+  });
+  window.addEventListener('mousemove', function(e) {
+    if (mouseDown === true) {
+      var cx = e.clientX;
+      var dx = cx - _cx;
+      _cx = cx;
 
-  //     seek(dx);
-  //   }
-  // });
+      seek(dx);
+    }
+  });
   // mobile
-  // window.addEventListener('touchstart', function(e) {
-  //   _cx = e.touches[0].clientX;
-  //   stop();
-  //   e.preventDefault();
-  // });
-  // window.addEventListener('touchend', function(e) {
-  //   resume();
-  //   e.preventDefault();
-  // });
-  // window.addEventListener('touchmove', function(e) {
-  //   var cx = e.touches[0].clientX;
-  //   var dx = cx - _cx;
-  //   _cx = cx;
+  window.addEventListener('touchstart', function(e) {
+    _cx = e.touches[0].clientX;
+    stop();
+    e.preventDefault();
+  });
+  window.addEventListener('touchend', function(e) {
+    resume();
+    e.preventDefault();
+  });
+  window.addEventListener('touchmove', function(e) {
+    var cx = e.touches[0].clientX;
+    var dx = cx - _cx;
+    _cx = cx;
 
-  //   seek(dx);
-  //   e.preventDefault();
-  // });
+    seek(dx);
+    e.preventDefault();
+  });
 }
