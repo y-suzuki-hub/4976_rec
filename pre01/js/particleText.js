@@ -54,8 +54,7 @@
 			        y: ay
 			    };
 				// 粒子の大きさ
-			    this.r = canvas.clientWidth / 2 * 0.004;
-				// this.r = canvas.clientWidth / 2 * 0.003;
+			    this.r = canvas.clientWidth / 2 * 0.003;
 			    this.color = colors[Math.floor(Math.random() * colors.length)];
 			}
 
@@ -131,8 +130,9 @@
 			    
 			    particles = [];
 
-			    for(var i=0; i<ww; i+=Math.round(ww/200)){
-			        for(var j=0;j<wh; j+=Math.round(ww/200)){
+			    // wwを割る数が大きくなると粒の密度が上がる
+				for(var i=0; i<ww; i+=Math.round(ww/300)){
+			        for(var j=0;j<wh; j+=Math.round(ww/300)){
 			            if(data[ ((i + j*ww)*4) + 3] > 150){
 			                particles.push(new Particle(i,j));
 			            }
