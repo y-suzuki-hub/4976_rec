@@ -23,7 +23,7 @@
       </header>
       <div id="wrapper">
 
-        <svg style="" id="mask" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="351.47" height="130.13" viewBox="0 0 351.47 130.13"
+        <svg id="mask" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="351.47" height="130.13" viewBox="0 0 351.47 130.13"
            style="enable-background:new 0 0 351.47 130.13;" xml:space="preserve">	
           
             <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="svg/text-fv2.svg" width="351.47" height="130.13" mask="url(#clipmask)"></image>
@@ -150,11 +150,6 @@
   /* background-color:#f18d00; */
 }
 
-#particle{
-    width:100%;
-	height: 100vh;
-	vertical-align: bottom;/*canvasタグ下に余白が生まれるのを防ぐ*/
-}
 
 .wrap{
 	animation: bgchange 60s ease infinite;/*変化の時間を変更したい場合は20sの部分を好きな時間に変更*/
@@ -231,62 +226,6 @@
     width: 30%;
 }
 
-/*====== 9-1-1 縦線が動いてスクロールを促す =======*/
-
-/*スクロールダウン全体の場所*/
-.scrolldown1{
-    /*描画位置※位置は適宜調整してください*/
-	position:absolute;
-	left:50%;
-	bottom:80px;
-    /*全体の高さ*/
-	height:50px;
-}
-
-/*Scrollテキストの描写*/
-.scrolldown1 span{
-    /*描画位置*/
-	position: absolute;
-	left:-15px;
-	top: -15px;
-    /*テキストの形状*/
-	color: #eee;
-	font-size: 0.7rem;
-	letter-spacing: 0.05em;
-}
-
-/* 線の描写 */
-.scrolldown1::after{
-	content: "";
-    /*描画位置*/
-	position: absolute;
-	top: 0;
-    /*線の形状*/
-	width: 1px;
-	height: 30px;
-	background: #eee;
-    /*線の動き1.4秒かけて動く。永遠にループ*/
-	animation: pathmove 1.4s ease-in-out infinite;
-	opacity:0;
-}
-
-/*高さ・位置・透過が変化して線が上から下に動く*/
-@keyframes pathmove{
-	0%{
-		height:0;
-		top:0;
-		opacity: 0;
-	}
-	30%{
-		height:30px;
-		opacity: 1;
-	}
-	100%{
-		height:0;
-		top:50px;
-		opacity: 0;
-	}
-}
 
 /*SVGのサイズ*/
 svg{
@@ -364,10 +303,8 @@ animation-fill-mode:forwards;
 
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="js/particleText.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="js/test-slick.js"></script>
-<script src="js/fv-01.js"></script>
 <script>
   $(".openbtn").click(function () {
   $(this).toggleClass('active');
